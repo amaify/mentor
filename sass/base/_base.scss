@@ -1,0 +1,53 @@
+$color-primary: hsl(322, 100%, 66%);
+$color-secondary: hsl(265, 100%, 66%);
+$color-neutral-1: hsl(214, 64%, 98%);
+$color-neutral-2: hsl(208, 11%, 55%);
+$color-neutral-3: hsl(192, 100%, 9%);
+
+
+@mixin responsive__mode($breakpoint) {
+    @if($breakpoint == phone){
+        @media only screen and (max-width: 600px){@content};
+    }
+
+    @if($breakpoint == tablet){
+        @media only screen and (max-width: 790px){@content};
+    }
+
+    @if($breakpoint == tablet-portrait){
+        @media only screen and (max-width: 1000px){@content};
+    }
+
+    @if ($breakpoint == desktop) {
+        @media only screen and (max-width: 1440px){@content};
+    }
+
+    // @if($breakpoint == tablet){
+    //     @media only screen and (min-width: 802px){@content};
+    // }
+
+    // @if($breakpoint == large__screen){
+    //     @media only screen and (min-width: 1000px){@content};
+    // }
+}
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: $color-neutral-1;
+    font-family: 'Open Sans', sans-serif;
+}

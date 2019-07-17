@@ -1,0 +1,208 @@
+.header{
+    position: relative;
+    height: 1200px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+
+    @include responsive__mode(tablet-portrait){
+        height: 950px;
+    }
+
+    @include responsive__mode(phone){
+        height: 700px;
+    }
+
+    &__background{
+        background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+        position: absolute;
+        bottom: 117%;
+        left: 121%;
+        width: 40%;
+        height: 18%;
+        border-radius: 16px;
+        transform: rotate(145deg) scale(4.9);
+        z-index: -1;
+
+        @include responsive__mode(desktop){
+            transform:  rotate(142deg) scale(5.5);
+            bottom: 124%;
+            left: 133%;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            transform: rotate(140deg) scale(5.5);
+            bottom: 116%;
+            left: 127%;
+        }
+
+        @include responsive__mode(tablet){
+            bottom: 105%;
+            left: 133%;
+        }
+
+        @include responsive__mode(phone){
+            transform: rotate(142deg) scale(3.9);
+            bottom: 86%;
+            left: 113%;
+        }
+    }
+
+    &__background2{
+        background: #fff;
+        width: 50%;
+        height: 30%;
+        position: absolute;
+        bottom: 36%;
+        left: 20%;
+        border-radius: 32px;
+        transform: rotate(160deg) scale(1.75);
+        z-index: -2;
+
+        @include responsive__mode(desktop){
+            transform: rotate(155deg) scale(1.65);
+            bottom: 35%;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            bottom: 24%;
+        }
+
+        @include responsive__mode(tablet){
+            bottom: 33%;
+            left: 24%;
+        }
+
+        @include responsive__mode(phone){
+            transform: rotate(241deg) scale(2.1);
+            bottom: 30%;
+            left: 35%;
+        }
+    }
+}
+
+.main__nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem 3rem 0 3rem;
+    margin-bottom: 3.5rem;
+
+    @include responsive__mode(phone){
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+
+    &--logo{
+        margin-right: auto;
+
+        @include responsive__mode(tablet-portrait){
+            width: 25%;
+        }
+
+        @include responsive__mode(phone){
+            width: 30%;
+        }
+
+        & img{
+            width: 100%;
+        }
+    }
+
+    &--link{
+        text-decoration: none;
+        background-color: $color-neutral-1;
+        padding: 0.5rem 2rem;
+        color: $color-neutral-2;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+
+        @include responsive__mode(tablet){
+            padding: 0.3rem 1rem;
+        }
+
+        @include responsive__mode(phone){
+            padding: 0.2rem 0.9rem;
+            font-size: 0.6rem;
+        }
+    }
+}
+
+.heading{
+    position: relative;
+    text-align: center;
+
+    &__image{
+        width: 100%;
+        position: relative;
+
+        & img{
+            width: 48%;
+            height: auto;
+
+            @include responsive__mode(tablet-portrait){
+                width: 65%;
+            }
+
+            @include responsive__mode(phone){
+                width: 74%;
+            }
+        }
+    }
+
+    &__title{
+        font-size: 26px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+
+        @include responsive__mode(tablet-portrait){
+            font-size: 1.3rem;
+        }
+
+        @include responsive__mode(phone){
+            font-size: 26px;
+            padding: 0 3rem;
+        }
+    }
+
+    &__description{
+        color: $color-neutral-2;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+
+        // @include responsive__mode(tablet-portrait){
+        //     padding: 0 2rem;
+        // }
+
+        @include responsive__mode(phone){
+            padding: 0 2rem;
+        }
+
+        &--1{
+            display: block;
+        }
+
+        &--2{
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        &--3{
+            display: block;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-neutral-1;
+        background-color: $color-primary;
+        font-size: 0.7rem;
+        padding: 0.8rem 3rem;
+        box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+
+        @include responsive__mode(phone){
+            padding: 0.5rem 1.5rem;
+        }
+    }
+}

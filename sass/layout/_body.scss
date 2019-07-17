@@ -1,0 +1,169 @@
+.features{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+
+    @include responsive__mode(tablet-portrait){
+        display: block;
+        width: 100%;
+        padding: 1.5rem 2rem;
+    }
+
+    @include responsive__mode(phone){
+        display: block;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    &__image{
+        width: 55%;
+        margin-right: auto;
+
+        @include responsive__mode(tablet-portrait){
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+        }
+
+        @include responsive__mode(phone){
+            width: 100%;
+        }
+
+        & img{
+            width: 100%;
+        }
+    }
+
+    &__description{
+        width: 35%;
+
+        @include responsive__mode(tablet-portrait){
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        @include responsive__mode(tablet){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include responsive__mode(phone){
+            width: 100%;
+            text-align: center;
+            padding-top: 3rem;
+        }
+    }
+
+    &__content{
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            margin: 0 1.5rem;
+        }
+
+        @include responsive__mode(tablet){
+            width: 40%;
+        }
+
+        @include responsive__mode(phone){
+            width: 100%;
+            margin: 0;
+            text-align: justify;
+        }
+    }
+
+    &__heading{
+        margin-bottom: 0.7rem;
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+
+        @include responsive__mode(tablet-portrait){
+            font-size: 0.9rem;
+        }
+
+        @include responsive__mode(phone){
+            text-align: center;
+        }
+    }
+
+    &__text{
+        color: $color-neutral-2;
+
+        @include responsive__mode(tablet-portrait){
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        @include responsive__mode(tablet){
+            text-align: left;
+        }
+
+        @include responsive__mode(phone){
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+        }
+    }
+}
+
+.trial{
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
+
+    @include responsive__mode(phone){
+        display: block;
+        width: 100%;
+        padding: 4rem 1.5rem;
+        margin-top: 1rem;
+    }
+
+    &__content{
+        background: #fff;
+        text-align: center;
+        width: 50%;
+        padding: 5rem 2.5rem;
+        box-shadow: 0 4px 32px 9px rgba(0, 0, 0, 0.1);
+
+        @include responsive__mode(desktop){
+            width: 65%;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            width: 70%;
+        }
+
+        @include responsive__mode(tablet){
+            width: 80%;
+        }
+
+        @include responsive__mode(phone){
+            width: 100%;
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    &__heading{
+        margin-bottom: 2rem;
+        font-family: 'Poppins', sans-serif;
+
+        @include responsive__mode(phone){
+            margin-bottom: 1rem;
+        }
+    }
+    
+    &__text{
+        margin-bottom: 2.5rem;
+        color: $color-neutral-2;
+
+        @include responsive__mode(phone){
+            font-size: 0.6rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
